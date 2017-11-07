@@ -11,6 +11,34 @@
     "version": "0.0.1"
   },
   "components": {
+    "schemas": {
+      "LOV_CodeLabel": {
+        "title": "Root Type for LOV_CodeLabel",
+        "description": "The root of the LOV_CodeLabel type's schema.",
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CodeLabel"
+            }
+          }
+        }
+      },
+      "CodeLabel": {
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "securitySchemes": {
       "api_key": {
         "type": "apiKey",
