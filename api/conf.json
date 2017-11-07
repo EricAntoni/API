@@ -1,1 +1,22 @@
-{"info":{"title":"Configuration API for iXbat","description":"","version":"1.0.0"},"openapi":"3.0.0"}
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Configuration API for iXbat",
+    "description": "The iXbat configuration API provides access to :\n  - product configuration\n  - list of values.\n",
+    "contact": {
+      "name": "Eric Antoni",
+      "url": "",
+      "email": "eantoni@cgsi.fr"
+    },
+    "version": "0.0.1"
+  },
+  "components": {
+    "securitySchemes": {
+      "api_key": {
+        "type": "apiKey",
+        "name": "api_key",
+        "in": "header"
+      }
+    }
+  }
+}
