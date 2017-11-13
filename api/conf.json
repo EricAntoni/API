@@ -10,6 +10,36 @@
     },
     "version": "0.0.1"
   },
+  "paths": {
+    "/lov/rh/salary-elements": {
+      "get": {
+        "summary": "Return the list of all salary elements",
+        "parameters": [
+          {
+            "name": "company",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Line"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   "components": {
     "schemas": {
       "LOV_CodeLabel": {
@@ -35,6 +65,20 @@
           },
           "label": {
             "type": "string"
+          }
+        }
+      },
+      "Line": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "properties": {
+          "line": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }
